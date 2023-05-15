@@ -3,9 +3,9 @@
 body {
 	background: #000000 url("assets/bg_omori.png") repeat right top;
 	color: white;
-	text-align: center;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-size: 16px;
+	margin-left: 0;
 }
 
 h1 {
@@ -69,21 +69,25 @@ a:active {
 ul.navBar {
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+	position: fixed;	
+	top: 0;
+	width: 100%;
+	display: inline-block;
 }
 
 ul.navBar li {
-	padding-top: 0;
+	float: left;
 }
 
 ul.navBar li a {
-	background-color: rgba(255,255,255,0);
-	border: 2px solid white;
-	padding: 8px 12px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	transition-duration: 0.2s;
 	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
 ul.navBar li a:hover {
@@ -98,6 +102,4 @@ ul.navBar li a.current {
 	background-color: #fff;
 	color: blue;
 	font-weight: bold;
-	padding: 6px 12px;
-	border: 4px solid gold;
 }
