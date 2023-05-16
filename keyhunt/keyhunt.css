@@ -34,6 +34,13 @@ li {
 	margin-top: 16px;
 }
 
+.important {
+	color: red;
+	font-weight: 600;
+	font-size: 140%;
+	font-style: italic;
+}
+
 a {
 	transition-duration: 0.1s;
 }
@@ -93,4 +100,11 @@ ul.navBar li a:active {
 ul.navBar li a.current {
 	background-color: #fff;
 	color: blue;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 50px; /* fixed header height*/
+  margin: -50px 0 0; /* negative fixed header height */
 }
