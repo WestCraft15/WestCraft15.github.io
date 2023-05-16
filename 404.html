@@ -1,12 +1,32 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Error 404: you done screwed up</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+	</head>
 
-<body>
-	<p>you clicked the wrong link, fool!</p>
-	<button onclick="history.back()">leave.</button>
-</body>
+	<body>
+	</body>
+
+	<script>
+		const head = document.getElementsByTagName("head")[0];
+		const body = document.getElementsByTagName("body")[0];
+		const messages =	[
+								["Error 404: you done screwed up", "you clicked the wrong link, fool!", "leave."]
+							]
+		
+		const message = messages[Math.floor(Math.random() * messages.length)]
+
+		const title = document.createElement("title")
+		title.textContent = message[0]
+		head.appendChild(title)
+
+		const msg = document.createElement("p")
+		msg.textContent = message[1]
+		body.append(msg)
+
+		const btn = document.createElement("button")
+		btn.textContent = message[2]
+		btn.setAttribute("onclick", "history.back()")
+		body.append(btn)
+	</script>
 </html>
