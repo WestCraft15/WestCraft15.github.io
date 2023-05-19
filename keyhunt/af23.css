@@ -1,5 +1,3 @@
-/* CSS Document */
-
 body {
 	background: #fff url("assets/bg_af23.png") repeat left top;
 	color: black;
@@ -103,8 +101,20 @@ ul.navBar li a.current {
 }
 
 :target::before {
-  content: "";
-  display: block;
-  height: 50px; /* fixed header height*/
-  margin: -50px 0 0; /* negative fixed header height */
+	content: "";
+	display: block;
+	height: 50px;
+	margin: -50px 0 0;
+}
+
+.dropdown-content {
+	display: none;
+	position: fixed;
+	background-color: #000;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
