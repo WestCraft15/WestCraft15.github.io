@@ -1,9 +1,26 @@
 body {
-	background: #fff url("assets/bg_af23.png") repeat left top;
 	color: black;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-size: 16px;
 	margin-left: 0;
+}
+
+.scrolling_bg {
+	background: #fff url("assets/bg_af23.png") repeat left top;
+	animation: slide 2s linear infinite;
+	width: 200%;
+	height: 100vw;
+	position: fixed;
+	z-index: -100;
+}
+
+@keyframes slide {
+	0% {
+		transform: translate3d(-259px, -194px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 h1 {
