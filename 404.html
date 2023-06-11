@@ -12,7 +12,7 @@
 		const body = document.getElementsByTagName("body")[0];
 		const messages =	[
 								["A Number 9 Large", "You clicked the wrong link, fool!", "Go Back"],
-								["look into the sky", "i see nothing\r\ni see so much of it", "leave\r\nleave"],
+								["look into the sky", "i see nothing\r\ni see so much of it", "leave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave"],
 //								["You Got Disk", "oh ah wwhoops!\r\ncontent files missing!", "sorry nothing"],
 								["Thank you Mario!", "But our webpage is in another castle!", "Push button B to select a world"],
 								["I'll steal it!", "That's it, I'm revoking your button privileges.", ""]
@@ -33,6 +33,7 @@
 			const btn = document.createElement("button")
 			btn.textContent = message[2]
 			btn.setAttribute("onclick", "history.back()")
+			btn.setAttribute("style", "white-space: pre;")
 			body.append(btn)
 		}
 	</script>
