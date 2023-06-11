@@ -8,8 +8,8 @@ body {
 .scrolling_bg {
 	background: #fff url("assets/bg_af23.png") repeat left top;
 	animation: slide 2s linear infinite;
-	width: 200%;
-	height: 100vw;
+	width: 200vw;
+	height: 200vh;
 	position: fixed;
 	z-index: -100;
 }
