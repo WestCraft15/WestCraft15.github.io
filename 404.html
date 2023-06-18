@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 	</head>
 
-	<body>
+	<body style="background-image: url(assets/404.png); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 125%;">
+		<p style="font-size: 72px;">Error 404</p>
 	</body>
 
 	<script>
@@ -13,9 +14,10 @@
 		const messages =	[
 								["A Number 9 Large", "You clicked the wrong link, fool!", "Go Back"],
 								["look into the sky", "i see nothing\r\ni see so much of it", "leave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave"],
-//								["You Got Disk", "oh ah wwhoops!\r\ncontent files missing!", "sorry nothing"],
+								["You Got Disk", "oh ah wwhops! content\r\nfiles missing", "back to go?"],
 								["Thank you Mario!", "But our webpage is in another castle!", "Push button B to select a world"],
-								["I'll steal it!", "That's it, I'm revoking your button privileges.", ""]
+								["I'll steal it!", "That's it, I'm revoking your button privileges.", ""],
+								["nope! try again", "She error on my 404 'til I page not found?", "*Extremely Loud Incorrect Buzzer*"]
 							]
 
 		const message = messages[Math.floor(Math.random() * messages.length)]
@@ -33,7 +35,7 @@
 			const btn = document.createElement("button")
 			btn.textContent = message[2]
 			btn.setAttribute("onclick", "history.back()")
-			btn.setAttribute("style", "white-space: pre;")
+			btn.setAttribute("style", "white-space: pre; font-size: 80%;")
 			body.append(btn)
 		}
 	</script>
