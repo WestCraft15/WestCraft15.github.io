@@ -1,24 +1,38 @@
 <!doctype html>
 <html>
+	<style>
+		body { background-image: url(/assets/404.png); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 125%; }
+		button { white-space: pre; font-size: 80%; border-radius: 4px; background-color: #FFF; border-color: #000; transition-duration: 0.1s;}
+		button:hover { background-color: #6BF; }
+		button:active { background-color: #098fdd; }
+	</style>
+
 	<head>
 		<meta charset="utf-8">
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 	</head>
 
-	<body style="background-image: url(/assets/404.png); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 125%;">
+	<body>
 		<p style="font-size: 72px;">Error 404</p>
 	</body>
 
 	<script>
 		const head = document.getElementsByTagName("head")[0];
 		const body = document.getElementsByTagName("body")[0];
-		const messages =	[
-								["A Number 9 Large", "You clicked the wrong link, fool!", "Go Back"],
-								["look into the sky", "i see nothing\r\ni see so much of it", "leave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave"],
-								["You Got Disk", "oh ah wwhops! content\r\nfiles missing", "back to go?"],
-								["Thank you Mario!", "But our webpage is in another castle!", "Push button B to select a world"],
-								["I'll steal it!", "That's it, I'm revoking your button privileges.", ""],
-								["nope! try again", "She error on my 404 'til I page not found?", "*Extremely Loud Incorrect Buzzer*"]
-							]
+		const messages = [
+			["A Number 9 Large", "You clicked the wrong link, fool!", "Go Back"],
+			["look into the sky", "i see nothing\r\ni see so much of it", "leave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave\r\nleave", "background-image: url(/keyhunt/assets/bg_omori.png); color: white;"],
+			["You Got Disk", "oh ah wwhops! content\r\nfiles missing", "back to go?"],
+			["Thank you Mario!", "But our webpage is in another castle!", "Push button B to select a world"],
+			["I'll steal it!", "That's it, I'm revoking your button privileges."],
+			["nope! try again", "She error on my 404 'til I page not found?", "*Extremely Loud Incorrect Buzzer*"],
+			["You already know", "Ayo look who fell asleep first!", "Prank 'em John!"],
+			["LEVEL SELECT", "You have found the secret level select\r\nscreen", "C O N G R A T U L A T I O N S"],
+			["missile silo", "The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting where it is from where it isn't, or where it isn't from where it is (whichever is greater), it obtains a difference, or deviation. The guidance subsystem uses deviations to generate corrective commands to drive the missile from a position where it is to a position where it isn't, and arriving at a position where it wasn't, it now is. Consequently, the position where it is, is now the position that it wasn't, and it follows that the position that it was, is now the position that it isn't. In the event that the position that it is in is not the position that it wasn't, the system has acquired a variation, the variation being the difference between where the missile is, and where it wasn't. If variation is considered to be a significant factor, it too may be corrected by the GEA. However, the missile must also know where it was. The missile guidance computer scenario works as follows. Because a variation has modified some of the information the missile has obtained, it is not sure just where it is. However, it is sure where it isn't, within reason, and it knows where it was. It now subtracts where it should be from where it wasn't, or vice-versa, and by differentiating this from the algebraic sum of where it shouldn't be, and where it was, it is able to obtain the deviation and its variation, which is called error.", "What?"],
+			["The High Ground", "Hello there.", "General Kenobi."],
+			["Giant Enemy Spider", "Oh, I love this part!", "Aah-Eee-Ooh"],
+			["lego death star", "Can he chug a sparkling water and not burp?", "Oh my gosh- what do i do?"],
+		]
 
 		const message = messages[Math.floor(Math.random() * messages.length)]
 
@@ -31,12 +45,15 @@
 		msg.setAttribute("style", "white-space: pre;")
 		body.append(msg)
 
-		if (message[2] !== "") {
+		if (message[2] !== undefined) {
 			const btn = document.createElement("button")
 			btn.textContent = message[2]
 			btn.setAttribute("onclick", "history.back()")
-			btn.setAttribute("style", "white-space: pre; font-size: 80%;")
 			body.append(btn)
+		}
+
+		if (message[3] !== undefined) {
+			body.setAttribute("style", message[3])
 		}
 	</script>
 </html>
