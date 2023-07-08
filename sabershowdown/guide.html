@@ -45,8 +45,14 @@
             
             Part 2: Stamina's Inner Workings
             As you probably already know, stamina management is crucial to your survival. But how does it work?
-            1. Atk vs Def
-            Swings have a base damage of 4x your Atk.
+            1. ATK vs DEF
+            All swings have a base damage of 4x your ATK. You block 1% of incoming damage per DEF. A Form IV user (12 ATK) hitting a form I user (70 DEF) would result in 12 x 4 x (1 - 0.7) = 14.4 damage.
+												2. Damage Penalties
+											 Doing certain things while swinging will apply a penalty to your base damage.
+												Crouching: 33.3%
+												Running: 25%
+												Blocking (Stacks with crouching): 9%
+												stam regen ~ 8/sec
         </div>
     </body>
 </html>
