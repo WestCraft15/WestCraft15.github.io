@@ -8,51 +8,75 @@
 	</head>
 
 	<body style="text-align: center;">
-		<ul class="navBar">
-			<li><a href="guide" class="current">Guide</a></li>
+		<ul hidden> <!--class="navBar"-->
+			<li><a href="guide" class="current" hidden>Guide</a></li>
 		</ul>
 		
-		<div style="padding:20px; margin-top:20px;">
+		<div> <!--style="padding:20px; margin-top:20px;">-->
 			<h1>Saber Showdown Advanced Mechanics Guide</h1>
 			<h2>An advanced guide to Saber Showdown's mechanics</h2>
             
-            Part 1: Forms
-            There are 5 main forms in the game. Some sabers also have a unique form. Here are their stats: <!--TODO: make this a table-->
-            I (blue)
-            6 Attack
-            70 Defense
-            0.22 Swing Speed
+            <h2>Part 1: Forms</h2>
+            <p>There are 5 main forms in the game. Some sabers also have a unique form. Here are their stats:</p> <!--TODO: add sabers-->
+            <table>
+                <tr>
+                    <th>Form/Saber</th>
+                    <th>ATK</th>
+                    <th>DEF</th>
+                    <th>SPD</th>
+                </tr>
+                <tr>
+                    <td>IV (blue)</td>
+                    <td>6</td>
+                    <td>70</td>
+                    <td>0.22</td>
+                </tr>
+                <tr>
+                    <td>V (cyan)</td>
+                    <td>8</td>
+                    <td>60</td>
+                    <td>0.22</td>
+                </tr>
+                <tr>
+                    <td>I (yellow)</td>
+                    <td>12</td>
+                    <td>55</td>
+                    <td>0.35</td>
+                </tr>
+                <tr>
+                    <td>II (purple)</td>
+                    <td>15</td>
+                    <td>46</td>
+                    <td>0.48</td>
+                </tr>
+                <tr>
+                    <td>VII (red)</td>
+                    <td>19</td>
+                    <td>42</td>
+                    <td>0.48</td>
+                </tr>
+            </table>
             
-            V (cyan)
-            8 Attack
-            60 Defense
-            0.22 Swing Speed
-            
-            IV (yellow)
-            12 Attack
-            55 Defense
-            0.35 Swing Speed
-            
-            II (purple)
-            15 Attack
-            50 Defense
-            0.48 Swing Speed
-            
-            VII (red)
-            19 Attack
-            40 Defense
-            0.48 Swing Speed
-            
-            Part 2: Stamina's Inner Workings
-            As you probably already know, stamina management is crucial to your survival. But how does it work?
-            1. ATK vs DEF
-            All swings have a base damage of 4x your ATK. You block 1% of incoming damage per DEF. A Form IV user (12 ATK) hitting a form I user (70 DEF) would result in 12 x 4 x (1 - 0.7) = 14.4 damage.
-												2. Damage Penalties
-											 Doing certain things while swinging will apply a penalty to your base damage.
-												Crouching: 33.3%
-												Running: 25%
-												Blocking (Stacks with crouching): 9%
-												stam regen ~ 8/sec
+            <h2>Part 2: Stamina's Inner Workings</h2>
+            <p>As you probably already know, stamina management is crucial to your survival. But how does it work?</p>
+            <ol>
+                <li>
+                    <p>Stamina regenerates at a speed of 8/second up to a maximum of 100.</p>
+                </li>
+                <li>
+                    <p>ATK vs DEF</p>
+                    <p>All swings have a base damage of 4x your ATK. You block 1% of incoming damage per DEF. A Form IV user (12 ATK) hitting a form I user (70 DEF) would result in 12 x 4 x (1 - 0.7) = 14.4 damage.</p>
+                </li>
+                <li>
+                    <p>Damage Penalties</p>
+                    <p>Doing certain things while swinging will apply a penalty to your base damage.</p>
+                    <ul>
+                        <li>Crouching: 33.3%</li>
+                        <li>Running: 25%</li>
+                        <li>Blocking (Stacks with crouching): 9%</li>
+                    </ul>
+                </li>
+            </ol>
         </div>
     </body>
 </html>
