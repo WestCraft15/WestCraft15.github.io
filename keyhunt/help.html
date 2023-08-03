@@ -3,9 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="keyhunt.css">
-		<title>what are you running from?</title>
+		<title>another lost soul has come here</title>
   		<link rel="icon" type="image/x-icon" href="assets/favicon.png">
 	</head>
+
+	<script>
+		const head = document.getElementsByTagName("head")[0];
+		const names = ["Grouy", "Greouy", "Bluouy", "Reouy", "Purouy", "Blaouy", "Lenny", "Gouy", "Piouy", "Oraouy"]
+
+		const favicon = document.createElement("link")
+		favicon.setAttribute("rel", "icon")
+		favicon.setAttribute("type", "image/x-icon")
+		favicon.setAttribute("href", "assets/" + names[Math.floor(Math.random() * names.length)] + ".png")
+		head.appendChild(favicon)
+	</script>
 
 	<body>
 		<ul class="navBar">

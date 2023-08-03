@@ -3,9 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="keyhunt.css">
-		<title>what are you running from?</title>
+		<title>another lost soul has come here</title>
   		<link rel="icon" type="image/x-icon" href="assets/favicon.png">
 	</head>
+
+	<script>
+		const head = document.getElementsByTagName("head")[0];
+		const names = ["Grouy", "Greouy", "Bluouy", "Reouy", "Purouy", "Blaouy", "Lenny", "Gouy", "Piouy", "Oraouy"]
+
+		const favicon = document.createElement("link")
+		favicon.setAttribute("rel", "icon")
+		favicon.setAttribute("type", "image/x-icon")
+		favicon.setAttribute("href", "assets/" + names[Math.floor(Math.random() * names.length)] + ".png")
+		head.appendChild(favicon)
+	</script>
 
 	<body>
 		<ul class="navBar">
@@ -25,16 +36,16 @@
 
 		<div style="padding:20px; margin-top:20px;">
 			<h1>All Keys Video Guide (Coming Soon!)</h1>
-			<p>This video shows the location of every Key in order. If you want to use the original guide, or if you need help on a specific Key, it can be found below.</p>
+			<p>This video will show the location of every Key in order. If you want to use the original guide, or if you need help on a specific Key, it can be found below.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ImDuLN3pQFo" title="All Keys" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="1">Key 1</h2>
-			<p>Talk to GPB in the <a href="help#void">Void Room</a> to start the Key Hunt. The Void Room can be unlocked by beating CToP. Then Mach Dash into the bottom of the wall to the right of Gerome on Floor 1.</p>
+			<p>Talk to GPB in the <a href="help#void">Void Room</a> to start the Key Hunt. The Void Room can be unlocked by beating the Crumbling Tower of Pizza. Then Mach Dash into the bottom of the wall to the right of Gerome on Floor 1.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vGQSddUHiZs" title="Key 1" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="2">Key 2</h2>
 			<p>Talk to Snick in the SAGE Building, then the Key spawns in the breakable block to the left of Oregano Mirage.</p>
 			<h3>Common Issues:</h3>
 			<ol>
-				<li>Contrary to popular belief, breaking the block before talking to Snick doesn't prevent the key from spawning.</li>
+				<li>Contrary to popular belief, breaking the block before talking to Snick doesn’t prevent the key from spawning.</li>
 			</ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GrYFBF_FuFc" title="Key 2" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="3">Key 3</h2>
@@ -47,11 +58,11 @@
 			<p>Super Jump past the one way platform to the right of You bring a light?, then Shoulder Bash right about halfway up the overhang.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aZeBpteuVBY" title="Key 5" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="6">Key 6</h2>
-			<p>In the Floor 1 Secret room, shoot the gate with a pistol bullet (using the “Pistol Chainsaw” side attack, not Vigilante’s pistol).</p>
+			<p>In the Floor 1 Secret room, shoot the gate with a pistol bullet (using the “ChainsawPistol” side attack, not Vigilante’s pistol).</p>
 			<h3>Common Issues:</h3>
 			<ol>
 				<li>If no bullet is fired, enter a level and immediately exit.</li>
-				<li>If the door doesn't break, talk to GPB in the <a href="help#void">Void Room</a> and verify you have the previous 5 Keys.</li>
+				<li>If the door doesn’t break, talk to GPB and verify you have the previous 5 Keys.</li>
 			</ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I6rlKE50CYA" title="Key 6" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="7">Key 7</h2>
@@ -59,8 +70,8 @@
 			<h3>Common Issues:</h3>
 			<ol>
 				<li>You have to use a keyboard. Press the arrow keys and the B and A keys.</li>
-				<li>Mario can do a “Wall Jump” if you fail to collect the Key, just mash jump while running into a wall.</li>
-				<li>When returning to Peppino, you'll have to jump before the last A press, or you'll get stuck in the floor.</li>
+				<li>Mario can do a “wall jump” if you fail to collect the Key, just mash jump while running into a wall.</li>
+				<li>When returning to Peppino, you’ll have to jump before the last A press, or you’ll get stuck in the floor.</li>
 			</ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ox7522mlfsQ" title="Key 7" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="8">Key 8</h2>
@@ -70,11 +81,11 @@
 			<p>First, talk to GPB. Then, visit the Granny Pizza in the Floor 4 Secret room and press up to talk to her as a normal NPC. After this, talk to the fourth Granny Pizza in the Arena Tutorial. Depending on what she says, there are 5 locations for the key to spawn.</p>
 			<h3>Locations: (TODO)</h3>
 			<ol>
-				<li>left of janitor: floor 1</li>
-				<li>under overhang: floor 2</li>
-				<li>under mushrooms: floor 3</li>
-				<li>above pipe: floor 4</li>
-				<li>"Something hidden above a cardboard cutout...": floor 5</li>
+				<li>“Something hidden in the wall... left of a janitor.”:<br>Floor 1</li>
+				<li>“Something hidden underneath an overhang in a desert...”:<br>Floor 2</li>
+				<li>“Something hidden underneath some mushrooms...”:<br>Floor 3</li>
+				<li>“Something hidden above a pipe...”:<br>Floor 4</li>
+				<li>“Something hidden above a cardboard cutout...”:<br>Floor 5</li>
 			</ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Df0EjC3-JyY" title="Key 9" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="10">Key 10</h2>
@@ -94,13 +105,11 @@
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XFAqhj6tBYo" title="Key 14" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="15">Key 15</h2>
 			<p>Floating above the pedestal in the Green Room, right before you enter CToP.</p>
-			<h3>Common Issues:</h3>
-			<ol><li>See Unlocking CToP.</li></ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/W9-0v2ghRiQ" title="Key 15" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="16">Key 16</h2>
 			<p>Ground Pound just to the left of the John Blocks near Holiday Cheer.</p>
 			<h3>Common Issues:</h3>
-			<ol><li>If the key doesn't spawn, talk to GPB.</li></ol>
+			<ol><li>If the key doesn’t spawn, talk to GPB.</li></ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9_ZCJNYk7go" title="Key 16" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="17">Key 17</h2>
 			<p>Floating in the middle of the ring on the SAGE Building.</p>
@@ -109,7 +118,7 @@
 			<p>Dash into the right wall of the tunnel up to Deep Dish 9, just after it turns purple.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eImdTR1Ja_Q" title="Key 18" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="19">Key 19</h2>
-			<p>On Floor 4, there are 4 locations for the Key to spawn. It will randomly choose one of them, and it's location will never change.</p>
+			<p>On Floor 4, there are 4 locations for the Key to spawn. It will randomly choose one of them, and it’s location will never change.</p>
 			<h3>Locations:</h3>
 			<ol>
 				<li>Ground Pound in the gap below the left one way platform.</li>
@@ -129,8 +138,6 @@
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-U3Ebl53MM" title="Key 22" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="23">Key 23</h2>
 			<p>On Floor 3 there is a secret to the right of the water just before the next room with a Key inside.</p>
-			<h3>Common Issues:</h3>
-			<ol><li>The Key above the water is a fake and unobtainable.</li></ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rUbS2l9x3ig" title="Key 23" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="24">Key 24</h2>
 			<p>In the 12th room of CToP, “Not the Time for Games”, dodge the first cow (or abuse the character select taunt) after the Minigolf section to find a Key on the ground below.</p>
@@ -139,26 +146,26 @@
 			<p>On Floor 2 you can enter the area with Fun Farm via hidden John Blocks above the visible ones.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C_LS53QqUFg" title="Key 25" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="26">Key 26</h2>
-			<p>You can break through the top of the wall to the right of Holiday Cheer. Talk to the Pizzaboy Clone and Super Jump directly above him to collect the Key. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT LOCKS YOU OUT OF KEY 37.</p>
+			<p>You can break through the top of the wall to the right of Holiday Cheer. Talk to the Pizzaboy Clone and Super Jump directly above him to collect the Key. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT WILL LOCK YOU OUT OF KEY 37.</p>
 			<h3>Common Issues:</h3>
 			<ol><li>If the block is still unbreakable, talk to GPB.</li></ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7Yf12YkL10Q" title="Key 26" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="27">Key 27</h2>
-			<p>Ground Pound just to the left of Fast Food Saloon. Talk to the Pizzaboy Clone and run right until you reach the Key. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT LOCKS YOU OUT OF KEY 37.</p>
+			<p>Ground Pound just to the left of Fast Food Saloon. Talk to the Pizzaboy Clone and run right until you reach the Key. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT WILL LOCK YOU OUT OF KEY 37.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0betMQUhZR8" title="Key 27" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="28">Key 28</h2>
-			<p>Wall Run up the overhang to the right of Deep Dish 9 to access another room. You can go through the ceiling on the right side to talk to the Pizzaboy Clone. The Key will spawn in a secret in the left wall of the bottom room. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT LOCKS YOU OUT OF KEY 37.</p>
+			<p>Wall Run up the overhang to the right of Deep Dish 9 to access another room. You can go through the ceiling on the right side to talk to the Pizzaboy Clone. The Key will spawn in a secret in the left wall of the bottom room. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT WILL LOCK YOU OUT OF KEY 37.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T9oQCU3TOFo" title="Key 28" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="29">Key 29</h2>
-			<p>Super Jump from the right half of the Oh Shit! gate to find a secret room. Enter the door and talk to the Pizzaboy Clone. The Key will spawn on a platform below you. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT LOCKS YOU OUT OF KEY 37.</p>
+			<p>Super Jump from the right half of the Oh Shit! gate to find a secret room. Enter the door and talk to the Pizzaboy Clone. The Key will spawn on a platform below you. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT WILL LOCK YOU OUT OF KEY 37.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/h7dG1so0OuI" title="Key 29" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="30">Key 30</h2>
-			<p>Talk to GPB. The Key spawns on a high platform to his left. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT LOCKS YOU OUT OF KEY 37.</p>
+			<p>Talk to GPB. The Key spawns on a high platform to his left. DO NOT TALK TO THE APPARITION THAT APPEARS OUTSIDE OF THE ROOM. IT WILL LOCK YOU OUT OF KEY 37.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6FVqR5OnoFw" title="Key 30" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="31">Key 31</h2>
 			<p>In Pizzascape, the Key is in a new room above the Secret that’s only available during Pizza Time. If you can’t access it, talk to GPB in the Void Room and try again. Complete a short challenge to find the Key and a Pizzaboy Cutout.</p>
 			<h3>Common Issues:</h3>
-			<ol><li>If you can't access the room, talk to GPB.</li></ol>
+			<ol><li>If you can’t access the room, talk to GPB.</li></ol>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/THa74LpZOHk" title="Key 31" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="32">Key 32</h2>
 			<p>In Wasteyard, the 3rd room (“The Pit”) has a new secret in the pillar to the right of the two Ranchers. This brings you to a maze with 12 places for the key to spawn, chosen at random. Watch the video for a path to check them all.</p>
@@ -170,10 +177,10 @@
 			<p>In room 12 of Refrigerator-Refrigerador-Freezerator (“Back of the Fridge”), there is a platform at the bottom right. Take the door hidden in the wall to find a new room. Get to the bottom, toggle the On/Off Switch, and make it back to the top to collect the Key.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Qw0cAiDh9JU" title="Key 34" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="35">Key 35</h2>
-			<p>In the 7th room of Don't Make A Sound, there are John Blocks to the right of the Treasure Room door. They deactivate during Pizza Time. There is a door inside the wall that leads to a new room. Get all the way to the right, toggle the On/Off Switch, and make it back without getting caught by the Sausage Toppin Monster to collect the Key.</p>
+			<p>In the 7th room of Don’t Make A Sound, there are John Blocks to the right of the Treasure Room door. They deactivate during Pizza Time. There is a door inside the wall that leads to a new room. Get all the way to the right, toggle the On/Off Switch, and make it back without getting caught by the Sausage Toppin Monster to collect the Key.</p>
 			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3-6pU8y_XA4" title="Key 35" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>-->
 			<h2 id="36">Key 36</h2>
-			<p>The credits now show 6 new hints. Due to a bug, the game DOES NOT SAVE upon hitting these spots, DO NOT quit to title or close the game during this proccess. You must complete them in this order:</p>
+			<p>The credits now show 6 new hints. Due to a bug, the game DOES NOT SAVE upon hitting these spots, DO NOT quit to title or close the game during this process. You must complete them in this order:</p>
 			<ol>
 				<li>Ground Pound a platform in the 7th room of Refrigerator-Refrigerador-Freezerator (“Icicle Pillars”). It’s the overhang immediately after you get up from the Pizza Box area.<br>
 				<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3aYSetw6sBU" title="Key 36a" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>--></li>
