@@ -1,9 +1,44 @@
 body {
-	background: #000000 url("assets/bg_omori.png") repeat left top;
-	color: white;
+	color: black;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-size: 16px;
 	margin-left: 0;
+}
+
+.scrolling_bg {
+	background: #fff0 url("assets/bg_heaven3.png") repeat left top;
+	animation: slide 30s linear infinite;
+	width: 200vw;
+	height: 200vh;
+	position: fixed;
+	z-index: -100;
+}
+
+@keyframes slide {
+	0% {
+		transform: translate3d(-960px, -540px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.scrolling_bg2 {
+	background: #fff url("assets/bg_heaven4.png") repeat left top;
+	animation: slide2 10s linear infinite;
+	width: 200vw;
+	height: 200vh;
+	position: fixed;
+	z-index: -200;
+}
+
+@keyframes slide2 {
+	0% {
+		transform: translate3d(-960px, 0px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 h1 {
@@ -49,7 +84,7 @@ a {
 }
 
 a:link {
-	color: lightskyblue;
+	color: dodgerblue;
 }
 
 a:visited {
@@ -57,7 +92,7 @@ a:visited {
 }
 
 a:hover {
-	color: dodgerblue;
+	color: cyan;
 }
 
 a:active {
