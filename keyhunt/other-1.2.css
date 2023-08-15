@@ -41,6 +41,14 @@ body {
 	}
 }
 
+.scrolling_bg3 {
+	background: #fff url("assets/bg_heaven2.png") repeat left top;
+	width: 200vw;
+	height: 200vh;
+	position: fixed;
+	z-index: -200;
+}
+
 .crustavo {
 	width: 128px;
 	height: 100px;
@@ -176,4 +184,33 @@ ul.navBar li a.current {
 
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+
+
+a.accept {
+	color: black;
+	text-decoration: none;
+}
+
+.whiteFade {
+	background-color: #fff;
+	opacity: 0%;
+	animation: fade 6s ease-in-out;
+	width: 200vw;
+	height: 200vh;
+	position: fixed;
+	z-index: 5;
+	pointer-events: none;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0%;
+	}
+	50% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 0%;
+	}
 }

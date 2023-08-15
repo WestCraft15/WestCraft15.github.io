@@ -21,6 +21,34 @@
 		favicon.setAttribute("type", "image/x-icon")
 		favicon.setAttribute("href", "assets/" + names[Math.floor(Math.random() * names.length)] + ".png")
 		head.appendChild(favicon)
+
+		function accept() {
+			var whiteFade = document.createElement("div")
+			whiteFade.setAttribute("class", "whiteFade")
+			document.getElementsByTagName("body")[0].insertBefore(whiteFade, document.getElementById("scrolling_bg2"))
+			document.getElementById("accept").setAttribute("href", "javascript:void(0)")
+
+			setTimeout(() => {
+				var star = new Audio('assets/sfx_star.mp3');
+				star.play();
+				var wind = document.createElement("audio")
+				wind.setAttribute("loop", "true")
+				wind.setAttribute("src", "assets/mu_wind.mp3")
+				wind.play()
+				document.getElementById("voidroommus").remove()
+				document.getElementById("purgatorymus").remove()
+				document.getElementById("scrolling_bg2").remove()
+				document.getElementById("scrolling_bg").setAttribute("class", "scrolling_bg3")
+				document.getElementById("thief").setAttribute("src", "assets/thief.png")
+				document.getElementById("pizzaboy").setAttribute("src", "assets/gpb.png")
+				document.getElementById("crust").setAttribute("src", "assets/crustavo.png")
+				document.getElementById("crust2").setAttribute("src", "assets/crustavo.png")
+				document.getElementById("pbclone").setAttribute("src", "assets/pbclone2.png")
+				document.getElementById("cbclone").setAttribute("src", "assets/cbclone2.png")
+				document.getElementById("crustcove").setAttribute("src", "assets/fake-keys/crustcovestone.png")
+				document.getElementById("ancientcheese").setAttribute("src", "assets/fake-keys/ancientcheesestone.png")
+			}, 3000);
+		}
 	</script>
 
 	<body>
@@ -39,9 +67,9 @@
 			</li>
 		</ul>
 
-		<div class="scrolling_bg2"></div>
+		<div class="scrolling_bg2" id="scrolling_bg2"></div>
 
-		<div class="scrolling_bg"></div>
+		<div class="scrolling_bg" id="scrolling_bg"></div>
 		
 		<div style="padding:20px; margin-top:20px;">
 			<h1 style="text-align: center;">Other Stuff</h1>
@@ -49,9 +77,8 @@
 			<p>Mimics are a rare kind of Toppin that can appear at any time. Upon entering a room with a Toppin, there is a 0.1%* chance that the Toppin will become a mimic. Exiting and reentering the room will reset the Toppin and reroll the RNG. When a Toppin becomes a mimic, it has a 50% chance to play a distorted cry for help. Upon being collected, it will play the collect sound at 80% speed, and has a 50% chance to play a very loud sound. Mimic Toppins are entirely black, and retain the shape of whichever Toppin they replaced. Other than that, they function identically to normal Toppins and only serve to scare the player occasionally.</p>
 			<p>*When talking to GPB, he may mention the Mimics, stating that they are only there to harm you. This is misleading, as they do nothing other than jumpscare you. Reading this dialog will raise the chances of a Toppin becoming a Mimic to 50% until the next one spawns.</p>
 			<h2>The Void Room</h2>
-			<audio controls>
-				<source src="assets/mu_pizzaboy.ogg" type="audio/ogg">
-				<source src="assets/mu_pizzaboy.mp3" type="audio/mp3">
+			<audio controls id="voidroommus">
+				<source src="assets/mu_pizzaboy.mp3" type="audio/mpeg">
 			</audio>
 			<p>This is the music that plays in the Void Room, as well as the Pizzaboy Clone rooms. It contains a speech of unknown origin (possibly religious?). A rough transcript is provided below.</p>
 			<p>0:34 - [Unintelligible]</p>
@@ -64,10 +91,10 @@
 			<p>1:01 - Ha-zi-est, to what [Unintelligible]</p>
 			<p>1:07 - [Unintelligible, perhaps another language?]</p>
 			<h2>Purgatory</h2>
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242513887&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+			<iframe id="purgatorymus" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242513887&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 			<p>This is the music that plays in Purgatory. It's taken from the Yume Nikki OST. It was also used in the April Fools build.</p>
 			<h2 id="gpb">GPB Dialog</h2>
-			<img src="assets/gpb.gif">
+			<img src="assets/gpb.gif" id="pizzaboy">
 			<ul style="font-size: 16px;">
 				<li>First Interaction:
 					<ol>
@@ -157,7 +184,7 @@
 				</li>
 			</ul>
 			<h2 id="pbclones">Pizzaboy Clones</h2>
-			<img src="assets/pbclone.png">
+			<img src="assets/pbclone.png" id="pbclone">
 			<p>The Pizzaboy Clones appear in the Void Rooms on each floor.</p>
 			<ol style="font-size: 16px;">
 				<li>what is it you seek?<br>a reward? salvation?<br>you will not find it here</li>
@@ -175,7 +202,7 @@
 				<li>what comes at the end is beyond your comprehension</li>
 			</ol>
 			<h2 id="cbapparitions">Coneboy Apparitions</h2>
-			<img src="assets/cbclone.png">
+			<img src="assets/cbclone.png" id="cbclone">
 			<p>The Coneboy Apparitions appear in place of the Pizzaboy Apparitions after defeating GPB (assuming you never talked to any of them).</p>
 			<ol style="font-size: 16px;">
 				<li>Someone is waiting for you.</li>
@@ -195,20 +222,20 @@
 				<li>Nothing but...<br>Wasted time.<br>Tell me...<br>...was it worth it?</li>
 			</ul>
 			<h2 id="scb">Silver Coneboy</h2>
-			<img src="assets/scb.png">
+			<img src="assets/scb.png" id="thief">
 			<p>Silver Coneboy appears in the Void Room after talking to the angel on each floor.</p>
 			<ul style="font-size: 16px;">
 				<li>it seems you have found yourself back to me<br>there is only one out to this madness<br>would you like to go back and start anew
 					<ul style="font-size: 16px; list-style-type: none;">
-						<li>yes</li>
+						<li><a href="javascript:accept()" class="accept" id="accept">yes</a></li>
 						<li>no</li>
 					</ul>
 				</li>
 			</ul>
 			<h2 id="crustavo">Crustavo</h2>
 			<div class="crustavo">
-				<img src="assets/crustavo.gif" class="crustavo2">
-				<img src="assets/crustavopoint.gif" class="crustavo3">
+				<img src="assets/crustavo.gif" class="crustavo2" id="crust">
+				<img src="assets/crustavopoint.gif" class="crustavo3" id="crust2">
 			</div>
 			<p>Crustavo exists solely to say vague and ominous things to scare the player. None of his dialog is actually relevant.</p>
 			<ul style="font-size: 16px;">
@@ -238,8 +265,8 @@
 			</ul>
 			<h2 id="fakekeys">Fake Keys</h2>
 			<p>There are a couple fake Keys scattered around the tower. Here they are:</p>
-			<img src="assets/fake-keys/crustcove.png" alt="The fake Key in Crust Cove." width="50%">
-			<img src="assets/fake-keys/ancientcheese.png" alt="The fake Key in The Ancient Cheese." width="50%">
+			<img id="crustcove" src="assets/fake-keys/crustcove.png" alt="The fake Key in Crust Cove." width="50%">
+			<img id="ancientcheese" src="assets/fake-keys/ancientcheese.png" alt="The fake Key in The Ancient Cheese." width="50%">
 		</div>
     </body>
 </html>
