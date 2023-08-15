@@ -27,6 +27,11 @@
 			whiteFade.setAttribute("class", "whiteFade")
 			document.getElementsByTagName("body")[0].insertBefore(whiteFade, document.getElementById("scrolling_bg2"))
 			document.getElementById("accept").setAttribute("href", "javascript:void(0)")
+			document.getElementById("nav1").setAttribute("href", "javascript:void(0)")
+			document.getElementById("nav2").setAttribute("href", "javascript:void(0)")
+			document.getElementById("nav3").setAttribute("href", "javascript:void(0)")
+			document.getElementById("nav4").setAttribute("href", "javascript:void(0)")
+			document.getElementById("dropdown").remove()
 
 			setTimeout(() => {
 				var star = new Audio('assets/sfx_star.mp3');
@@ -35,6 +40,8 @@
 				wind.setAttribute("loop", "true")
 				wind.setAttribute("src", "assets/mu_wind.mp3")
 				wind.play()
+				document.getElementsByTagName("body")[0].setAttribute("class", "stop-scrolling")
+				document.getElementById("nav0").setAttribute("class", "navBar2")
 				document.getElementById("voidroommus").remove()
 				document.getElementById("purgatorymus").remove()
 				document.getElementById("scrolling_bg2").remove()
@@ -42,7 +49,8 @@
 				document.getElementById("thief").setAttribute("src", "assets/thief.png")
 				document.getElementById("pizzaboy").setAttribute("src", "assets/gpb.png")
 				document.getElementById("crust").setAttribute("src", "assets/crustavo.png")
-				document.getElementById("crust2").setAttribute("src", "assets/crustavo2.png")
+				document.getElementById("crust").setAttribute("class", "")
+				document.getElementById("crust2").remove()
 				document.getElementById("pbclone").setAttribute("src", "assets/pbclone2.png")
 				document.getElementById("cbclone").setAttribute("src", "assets/cbclone2.png")
 				document.getElementById("crustcove").setAttribute("src", "assets/fake-keys/crustcovestone.png")
@@ -52,14 +60,14 @@
 	</script>
 
 	<body>
-		<ul class="navBar">
-			<li><a href="keyhunt">Landing page</a></li>
-			<li><a href="guide">Keys</a></li>
-			<li><a href="help">Help</a></li>
-			<li><a href="other" class="current">Other Stuff</a></li>
+		<ul class="navBar" id="nav0">
+			<li><a href="keyhunt" id="nav1">Landing page</a></li>
+			<li><a href="guide" id="nav2">Keys</a></li>
+			<li><a href="help" id="nav3">Help</a></li>
+			<li><a href="other" id="nav4" class="current">Other Stuff</a></li>
 			<li class="dropdown">
 				<a href="javascript:void(0)">Version</a>
-				<div class="dropdown-content">
+				<div class="dropdown-content" id="dropdown">
 					<a href="other" class="current">1.2</a>
 					<a href="other-1.1">1.1</a>
 					<a href="other-af23">April Fools</a>

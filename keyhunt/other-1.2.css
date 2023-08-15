@@ -167,6 +167,40 @@ ul.navBar li a.current {
 	color: blue;
 }
 
+ul.navBar2 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+	position: fixed;	
+	top: 0;
+	width: 100%;
+	display: block;
+	z-index: 10;
+}
+
+ul.navBar2 li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+ul.navBar2 li a {
+	display: block;
+	color: #90A0B0;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 90%;
+	margin: 0;
+}
+
+ul.navBar2 li a.current {
+	background-color: #90A0B0;
+	color: #304058;
+}
+
 :target::before {
 	content: "";
 	display: block;
@@ -199,8 +233,14 @@ a.accept {
 	width: 200vw;
 	height: 200vh;
 	position: fixed;
-	z-index: 5;
+	top: 0px;
+	z-index: 15;
 	pointer-events: none;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
 }
 
 @keyframes fade {
