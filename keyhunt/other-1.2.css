@@ -226,6 +226,11 @@ a.accept {
 	text-decoration: none;
 }
 
+a.accept2 {
+	color: #212C3D;
+	text-decoration: none;
+}
+
 .whiteFade {
 	background-color: #fff;
 	opacity: 0%;
@@ -235,12 +240,6 @@ a.accept {
 	position: fixed;
 	top: 0px;
 	z-index: 15;
-	pointer-events: none;
-}
-
-.stop-scrolling {
-	height: 100%;
-	overflow: hidden;
 }
 
 @keyframes fade {

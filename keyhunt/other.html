@@ -26,45 +26,43 @@
 			var whiteFade = document.createElement("div")
 			whiteFade.setAttribute("class", "whiteFade")
 			document.getElementsByTagName("body")[0].insertBefore(whiteFade, document.getElementById("scrolling_bg2"))
-			document.getElementById("accept").setAttribute("href", "javascript:void(0)")
-			document.getElementById("nav1").setAttribute("href", "javascript:void(0)")
-			document.getElementById("nav2").setAttribute("href", "javascript:void(0)")
-			document.getElementById("nav3").setAttribute("href", "javascript:void(0)")
-			document.getElementById("nav4").setAttribute("href", "javascript:void(0)")
+			for (e of document.getElementsByTagName("a"))
+			{
+				e.setAttribute("href", "javascript:void(0)")
+			}
 			document.getElementById("dropdown").remove()
 
 			setTimeout(() => {
-				var star = new Audio('assets/sfx_star.mp3');
-				star.play();
-				var wind = document.createElement("audio")
+				var star = new Audio('assets/sfx_star.mp3')
+				star.play()
+				var wind = new Audio('assets/mu_wind.mp3')
 				wind.setAttribute("loop", "true")
-				wind.setAttribute("src", "assets/mu_wind.mp3")
 				wind.play()
-				document.getElementsByTagName("body")[0].setAttribute("class", "stop-scrolling")
-				document.getElementById("nav0").setAttribute("class", "navBar2")
-				document.getElementById("voidroommus").remove()
+				document.getElementsByTagName("body")[0].setAttribute("style", "height: 100%; overflow: hidden; color: #212C3D;")
+				document.getElementsByClassName("crustavo2")[0].setAttribute("class", "")
+				document.getElementsByClassName("crustavo3")[0].remove()
+				document.getElementsByClassName("navBar")[0].setAttribute("class", "navBar2")
+				document.getElementsByTagName("audio")[0].remove()
 				document.getElementById("purgatorymus").remove()
-				document.getElementById("scrolling_bg2").remove()
-				document.getElementById("scrolling_bg").setAttribute("class", "scrolling_bg3")
-				document.getElementById("thief").setAttribute("src", "assets/thief.png")
-				document.getElementById("pizzaboy").setAttribute("src", "assets/gpb.png")
-				document.getElementById("crust").setAttribute("src", "assets/crustavo.png")
-				document.getElementById("crust").setAttribute("class", "")
-				document.getElementById("crust2").remove()
-				document.getElementById("pbclone").setAttribute("src", "assets/pbclone2.png")
-				document.getElementById("cbclone").setAttribute("src", "assets/cbclone2.png")
-				document.getElementById("crustcove").setAttribute("src", "assets/fake-keys/crustcovestone.png")
-				document.getElementById("ancientcheese").setAttribute("src", "assets/fake-keys/ancientcheesestone.png")
+				document.getElementById("purgatorymus2").removeAttribute("hidden")
+				document.getElementById("accept").setAttribute("class", "accept2")
+				document.getElementsByClassName("scrolling_bg2")[0].remove()
+				document.getElementsByClassName("scrolling_bg")[0].setAttribute("class", "scrolling_bg3")
+				for (e of document.getElementsByTagName("img")) {
+					var image = e.getAttribute("src")
+					image = image.substr(0, image.length - 4) + "stone.png"
+					e.setAttribute("src", image)
+				}
 			}, 3000);
 		}
 	</script>
 
 	<body>
-		<ul class="navBar" id="nav0">
-			<li><a href="keyhunt" id="nav1">Landing page</a></li>
-			<li><a href="guide" id="nav2">Keys</a></li>
-			<li><a href="help" id="nav3">Help</a></li>
-			<li><a href="other" id="nav4" class="current">Other Stuff</a></li>
+		<ul class="navBar">
+			<li><a href="keyhunt">Landing page</a></li>
+			<li><a href="guide">Keys</a></li>
+			<li><a href="help">Help</a></li>
+			<li><a href="other" class="current">Other Stuff</a></li>
 			<li class="dropdown">
 				<a href="javascript:void(0)">Version</a>
 				<div class="dropdown-content" id="dropdown">
@@ -85,9 +83,11 @@
 			<p>Mimics are a rare kind of Toppin that can appear at any time. Upon entering a room with a Toppin, there is a 0.1%* chance that the Toppin will become a mimic. Exiting and reentering the room will reset the Toppin and reroll the RNG. When a Toppin becomes a mimic, it has a 50% chance to play a distorted cry for help. Upon being collected, it will play the collect sound at 80% speed, and has a 50% chance to play a very loud sound. Mimic Toppins are entirely black, and retain the shape of whichever Toppin they replaced. Other than that, they function identically to normal Toppins and only serve to scare the player occasionally.</p>
 			<p>*When talking to GPB, he may mention the Mimics, stating that they are only there to harm you. This is misleading, as they do nothing other than jumpscare you. Reading this dialog will raise the chances of a Toppin becoming a Mimic to 50% until the next one spawns.</p>
 			<h2>The Void Room</h2>
-			<audio controls id="voidroommus">
-				<source src="assets/mu_pizzaboy.mp3" type="audio/mpeg">
-			</audio>
+			<div style="height: 86px;">
+				<audio controls>
+					<source src="assets/mu_pizzaboy.mp3" type="audio/mpeg">
+				</audio>
+			</div>
 			<p>This is the music that plays in the Void Room, as well as the Pizzaboy Clone rooms. It contains a speech of unknown origin (possibly religious?). A rough transcript is provided below.</p>
 			<p>0:34 - [Unintelligible]</p>
 			<p>0:39 - Coming on down, coming on down today</p>
@@ -100,9 +100,10 @@
 			<p>1:07 - [Unintelligible, perhaps another language?]</p>
 			<h2>Purgatory</h2>
 			<iframe id="purgatorymus" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242513887&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+			<div id="purgatorymus2" style="height: 166px;" hidden></div>
 			<p>This is the music that plays in Purgatory. It's taken from the Yume Nikki OST. It was also used in the April Fools build.</p>
 			<h2 id="gpb">GPB Dialog</h2>
-			<img src="assets/gpb.gif" id="pizzaboy">
+			<img src="assets/gpb.gif">
 			<ul style="font-size: 16px;">
 				<li>First Interaction:
 					<ol>
@@ -192,7 +193,7 @@
 				</li>
 			</ul>
 			<h2 id="pbclones">Pizzaboy Clones</h2>
-			<img src="assets/pbclone.png" id="pbclone">
+			<img src="assets/pbclone.png">
 			<p>The Pizzaboy Clones appear in the Void Rooms on each floor.</p>
 			<ol style="font-size: 16px;">
 				<li>what is it you seek?<br>a reward? salvation?<br>you will not find it here</li>
@@ -210,7 +211,7 @@
 				<li>what comes at the end is beyond your comprehension</li>
 			</ol>
 			<h2 id="cbapparitions">Coneboy Apparitions</h2>
-			<img src="assets/cbclone.png" id="cbclone">
+			<img src="assets/cbclone.png">
 			<p>The Coneboy Apparitions appear in place of the Pizzaboy Apparitions after defeating GPB (assuming you never talked to any of them).</p>
 			<ol style="font-size: 16px;">
 				<li>Someone is waiting for you.</li>
@@ -230,7 +231,7 @@
 				<li>Nothing but...<br>Wasted time.<br>Tell me...<br>...was it worth it?</li>
 			</ul>
 			<h2 id="scb">Silver Coneboy</h2>
-			<img src="assets/scb.png" id="thief">
+			<img src="assets/scb.png">
 			<p>Silver Coneboy appears in the Void Room after talking to the angel on each floor.</p>
 			<ul style="font-size: 16px;">
 				<li>it seems you have found yourself back to me<br>there is only one out to this madness<br>would you like to go back and start anew
@@ -242,8 +243,8 @@
 			</ul>
 			<h2 id="crustavo">Crustavo</h2>
 			<div class="crustavo">
-				<img src="assets/crustavo.gif" class="crustavo2" id="crust">
-				<img src="assets/crustavopoint.gif" class="crustavo3" id="crust2">
+				<img src="assets/crustavo.gif" class="crustavo2">
+				<img src="assets/crustavopoint.gif" class="crustavo3">
 			</div>
 			<p>Crustavo exists solely to say vague and ominous things to scare the player. None of his dialog is actually relevant.</p>
 			<ul style="font-size: 16px;">
@@ -273,8 +274,8 @@
 			</ul>
 			<h2 id="fakekeys">Fake Keys</h2>
 			<p>There are a couple fake Keys scattered around the tower. Here they are:</p>
-			<img id="crustcove" src="assets/fake-keys/crustcove.png" alt="The fake Key in Crust Cove." width="50%">
-			<img id="ancientcheese" src="assets/fake-keys/ancientcheese.png" alt="The fake Key in The Ancient Cheese." width="50%">
+			<img src="assets/fake-keys/crustcove.png" alt="The fake Key in Crust Cove." width="50%">
+			<img src="assets/fake-keys/ancientcheese.png" alt="The fake Key in The Ancient Cheese." width="50%">
 		</div>
     </body>
 </html>
