@@ -35,6 +35,9 @@
 			["Promoted Tweet", "I hit the juckport 1 trillion$", "Show this thread"],
 			["self doubt", "I will never make a diss record", "speedrunner mario"],
 			["what is even happening", "I am recreating tony", "oh no"],
+			["YouTube?", "Welcome back,", "WestCraft here."],
+			["YouTube?", "Hello everybody,", "my name is welcome."],
+			["AAAAAAAAAAAAAA", "AAAAAAAAAAAAAA", "AAAAAAAAAAAAAA", "background-image: url(/assets/AAAAAAAAAAAAAA.png);"],
 			["Wonder Effect!", "upside-down"],
 			["Wonder Effect!", "mirrored"],
 			["I hit my nose", "When the moon hits your eye, like a big pizza pie, that's amore.\r\nWhen the eel lunges out, and takes a bite of your snout, that's a moray.", "Get it? A moray eel?"],
@@ -46,6 +49,10 @@
 		const title = document.createElement("title")
 		title.textContent = message[0]
 		head.appendChild(title)
+
+		if (message[0] == "AAAAAAAAAAAAAA") {
+			body.getElementsByTagName("p")[0].textContent = "AAAAAAAAAAAAAA"
+		}
 
 		if (message[0] == "Wonder Effect!") {
 			const msg = document.createElement("p")
