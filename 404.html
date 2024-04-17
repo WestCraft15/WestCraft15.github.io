@@ -31,9 +31,12 @@
 			["missile silo", "The missile knows where it is at all times. It knows this because it knows where it isn't. By subtracting where it is from where it isn't, or where it isn't from where it is (whichever is greater), it obtains a difference, or deviation. The guidance subsystem uses deviations to generate corrective commands to drive the missile from a position where it is to a position where it isn't, and arriving at a position where it wasn't, it now is. Consequently, the position where it is, is now the position that it wasn't, and it follows that the position that it was, is now the position that it isn't. In the event that the position that it is in is not the position that it wasn't, the system has acquired a variation, the variation being the difference between where the missile is, and where it wasn't. If variation is considered to be a significant factor, it too may be corrected by the GEA. However, the missile must also know where it was. The missile guidance computer scenario works as follows. Because a variation has modified some of the information the missile has obtained, it is not sure just where it is. However, it is sure where it isn't, within reason, and it knows where it was. It now subtracts where it should be from where it wasn't, or vice-versa, and by differentiating this from the algebraic sum of where it shouldn't be, and where it was, it is able to obtain the deviation and its variation, which is called error.", "What?"],
 			["The High Ground", "Hello there.", "General Kenobi."],
 			["Giant Enemy Spider", "Oh, I love this part!", "Aah-Eee-Ooh"],
-			["lego death star", "Can he chug a sparkling water and not burp?", "Oh my gosh- what do i do?"],
 			["Also try Minecraft!", "Cascade?", "That's my favorite map!"],
+			["Promoted Tweet", "I hit the juckport 1 trillion$", "Show this thread"],
+			["self doubt", "I will never make a diss record", "speedrunner mario"],
 			["what is even happening", "I am recreating tony", "oh no"],
+			["Wonder Effect!", "upside-down"],
+			["Wonder Effect!", "mirrored"],
 			["I hit my nose", "When the moon hits your eye, like a big pizza pie, that's amore.\r\nWhen the eel lunges out, and takes a bite of your snout, that's a moray.", "Get it? A moray eel?"],
 			["Entry Number 17", "Dark, darker, yet darker...", "Hello Internet, welcome to Game Theory.", "color: #FFF; background-color: #000; background-image: none;"]
 		]
@@ -44,10 +47,45 @@
 		title.textContent = message[0]
 		head.appendChild(title)
 
-		const msg = document.createElement("p")
-		msg.textContent = message[1]
-		msg.setAttribute("style", "white-space: pre;")
-		body.append(msg)
+		if (message[0] == "Wonder Effect!") {
+			const msg = document.createElement("p")
+			msg.textContent = "Mama Mia!"
+
+			const btn = document.createElement("button")
+			btn.textContent = "Wonder Seed"
+
+			switch (message[1]) {
+				case "upside-down":
+					body.getElementsByTagName("p")[0].setAttribute("style", "font-size: 72px; rotate: 180deg;")
+
+					msg.setAttribute("style", "white-space: pre; rotate: 180deg;")
+					body.prepend(msg)
+
+					btn.textContent = "Wonder Seed"
+					btn.setAttribute("style", "rotate: 180deg; margin-top: 64px;")
+					btn.setAttribute("onclick", "history.back()")
+					body.prepend(btn)
+					break
+				case "mirrored":
+					body.getElementsByTagName("p")[0].setAttribute("style", "font-size: 72px; transform: scale(-1, 1);")
+
+					msg.textContent = "Mama Mia!"
+					msg.setAttribute("style", "white-space: pre; transform: scale(-1, 1);")
+					body.append(msg)
+
+					btn.setAttribute("style", "transform: scale(-1, 1);")
+					btn.setAttribute("onclick", "history.back()")
+					body.append(btn)
+					break
+			}
+		}
+
+		if (message[0] != "Wonder Effect!") {
+			const msg = document.createElement("p")
+			msg.textContent = message[1]
+			msg.setAttribute("style", "white-space: pre;")
+			body.append(msg)
+		}
 
 		if (message[2] !== undefined) {
 			const btn = document.createElement("button")
